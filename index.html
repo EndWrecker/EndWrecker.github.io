@@ -3,52 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Your Name - Interactive Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home">
-            <h1>Your Name</h1>
-            <p>Undergraduate Student in [Your Field]</p>
+        <section id="home" class="parallax">
+            <div class="content">
+                <h1 class="glitch" data-text="Your Name">Your Name</h1>
+                <p class="subtitle">Undergraduate Student in [Your Field]</p>
+                <a href="#about" class="cta-button">Learn More</a>
+            </div>
         </section>
 
         <section id="about">
             <h2>About Me</h2>
             <p>Write a brief introduction about yourself here.</p>
+            <div class="interests">
+                <div class="interest-item" data-icon="🎓">Education</div>
+                <div class="interest-item" data-icon="💻">Technology</div>
+                <div class="interest-item" data-icon="🎨">Creativity</div>
+                <div class="interest-item" data-icon="🌍">Innovation</div>
+            </div>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
-            <ul>
-                <li>Skill 1</li>
-                <li>Skill 2</li>
-                <li>Skill 3</li>
-                <li>Skill 4</li>
-            </ul>
+            <div class="skill-container">
+                <div class="skill-item" data-skill="HTML">
+                    <div class="skill-progress" style="width: 90%;"></div>
+                </div>
+                <div class="skill-item" data-skill="CSS">
+                    <div class="skill-progress" style="width: 85%;"></div>
+                </div>
+                <div class="skill-item" data-skill="JavaScript">
+                    <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+                <div class="skill-item" data-skill="Python">
+                    <div class="skill-progress" style="width: 75%;"></div>
+                </div>
+            </div>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of project 1</p>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of project 2</p>
+            <div class="project-container">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>Description of project 1</p>
+                    <a href="#" class="project-link">Learn More</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Description of project 2</p>
+                    <a href="#" class="project-link">Learn More</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project 3</h3>
+                    <p>Description of project 3</p>
+                    <a href="#" class="project-link">Learn More</a>
+                </div>
             </div>
         </section>
 
@@ -58,13 +85,18 @@
                 <input type="text" id="name" placeholder="Your Name" required>
                 <input type="email" id="email" placeholder="Your Email" required>
                 <textarea id="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
+                <button type="submit">Send <i class="fas fa-paper-plane"></i></button>
             </form>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
